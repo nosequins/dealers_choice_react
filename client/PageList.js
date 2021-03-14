@@ -19,7 +19,6 @@ const PageList =(props)=>{
                         problem={problem}
                         key={problem.id}
                         selectProblem={selectProblem}
-
                         />
                     ))}
             </tbody>

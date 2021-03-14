@@ -1,5 +1,5 @@
 *{font-family:Algerian;}
-form #theProblem{
+form, #theProblem{
     display: flex;
     justify-content: center;
     flex-direction: column;

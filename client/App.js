@@ -22,8 +22,8 @@ export default class App extends Component{
 
     async selectProblem(id){
         try{
-            const selectedProblem= (await axios.get(`/problems/id`)).data
-            this.setState({selectedProblem})
+            const selectedProblem= (await axios.get(`/problems/${id}`)).data
+            this.setState({selectedProblem});
         }catch(err){
             console.log(err)
         }
