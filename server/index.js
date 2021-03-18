@@ -13,7 +13,7 @@ app.get('/', (req, res, next)=>{
     res.sendFile(path.join(__dirname,'..', '/client', 'index.html' ))
 })
 
- 
+ //this post should be in the router so shouldnt be here
 app.post('/', async(req,res, next)=>{
     try{
         console.log(req.body)
@@ -33,7 +33,7 @@ const init= async()=>{
         await syncAndSeed()
         const port= process.env.PORT || 3000
         app.listen(port,()=>(
-            
+
             console.log(`listening on port ${port}`)
         ))
 

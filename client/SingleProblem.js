@@ -9,7 +9,12 @@ const SingleProblem=(props)=>{
             <div>{name}</div>
             <p>{description}</p>
             <div>{year}</div>
-            <img src={visual}/>
+            <img src={visual} />
+            {/*the more modern way to do this is to create a function
+            that you use when the form is submitted.
+            this would look like <form onSubmit={() => someFunction(id)}/>
+            and in that function, use axios to make a delete request to  the server
+            instead of using method override*/}
             <form method='POST' action={`/problems/${id}?_method=DELETE`}>
             <button>x</button>
             </form>

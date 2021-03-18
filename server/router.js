@@ -35,6 +35,12 @@ router.delete('/:id', async(req, res, next)=>{
     try{
         const delProblem= await Problem.findByPk(req.params.id);
         await delProblem.destroy();
+        //this redirects to '/problems' because you are using it within
+        //the `/problems` router
+        //your delete routes should send back an http status code 204
+        //following the RESTful api principles
+        //https://restfulapi.net/http-status-204-no-content/
+        //when using react, your data routes should not change the view on the frontend 
         res.redirect('/')
 
     }catch(err){
